@@ -1,0 +1,30 @@
+{% extends 'layouts/base.njk' %}
+
+{% block styles %}
+  {% set css %}
+    {% include "css/base.css" %}
+    {% include "css/nav.css" %}
+    {% include "css/page.css" %}
+    {% include "css/resources.css" %}
+    {% include "css/library.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+{% endblock %}
+
+{% block content %}
+<main id="main-content">
+  <div class="page-header">
+    <h2 class="page-title">{{ title }}</h2>
+  </div>
+  <div class="page-content">
+    {{ content | safe }}
+  </div>
+  {% if embed %}
+  <div class="library-embed">
+    {{ embed | safe }}
+  </div>
+  {% endif %}
+</main>
+{% endblock %}

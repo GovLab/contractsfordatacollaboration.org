@@ -1,0 +1,159 @@
+/*
+  Brand colors
+
+  Primary 01 #00a4c6
+  Primary 02 #0077a5
+
+  Secondary 01 #006297
+  Secondary 02 #134d8a
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+  /*
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  /*
+  flex: 1 0 auto;
+  */
+}
+
+html {
+  font-family: "Futura PT",futura-pt,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+a:not([class]) {
+  color: #0077a5;
+}
+a:not([class]):hover {
+  color: #00a4c6;
+}
+
+blockquote:not([class]),
+ol:not([class]),
+ul:not([class]),
+p:not([class]) {
+  margin: 1.5rem auto;
+}
+
+h1:not([class]) + p:not([class]),
+h2:not([class]) + p:not([class]),
+h3:not([class]) + p:not([class]),
+h4:not([class]) + p:not([class]),
+h5:not([class]) + p:not([class]),
+h6:not([class]) + p:not([class]){
+  margin-top: .5rem;
+}
+
+blockquote:not([class]),
+ol:not([class]),
+ul:not([class]) {
+  margin-left: 2rem;
+}
+
+li > ol:not([class]),
+li > ul:not([class]) {
+  margin: .5rem auto;
+  margin-left: 1rem;
+}
+
+img:not([class]) {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* Footer */
+.site-footer {
+  background: #0077a5;
+  color: #fff;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.footer-navigation {
+  flex: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .footer-navigation {
+    flex: 40%;
+    flex-grow: 0;
+  }
+}
+.footer-nav-list {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+.footer-nav-list-item {
+  flex: 100%;
+}
+.footer-nav-list-item a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-nav-list-item a[aria-current="page"] {
+  text-decoration: underline;
+}
+.partners {
+  flex: 100%;
+  color: #fff;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 800px) {
+  .partners {
+    flex: 40%;
+    flex-grow: 0;
+    margin-top: 0;
+  }
+}
+.partners-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+.partners-list li {
+  flex: 50%;
+  margin: 1.5rem auto;
+  padding: .5rem;
+}
+.partner-link {
+  color: #fff;
+}
+.partner-logo {
+  max-width: 150px;
+}

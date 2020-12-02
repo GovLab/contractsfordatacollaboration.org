@@ -1,0 +1,36 @@
+<footer role="contentinfo" class="site-footer">
+  {% if navigation.items %}
+  <nav class="footer-navigation">
+    <strong>Sections</strong>
+    <ul class="footer-nav-list">
+    {% for item in navigation.items %}
+      {% set currentAttribute = '' %}
+
+      {% if page.url == item.url %}
+        {% set currentAttribute = 'aria-current="page"' %}
+      {% endif %}
+
+      <li class="footer-nav-list-item">
+        <a href="{{ item.url }}" {{ currentAttribute | safe }}>{{ item.text }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
+  {% if partners.items %}
+  <div class="partners">
+    <strong>Partners</strong>
+    <ul class="partners-list">
+    {% for item in partners.items %}
+      <li>
+        <a href="{{ item.url }}" title="{{ item.text }}" class="partner-link">
+          <img src="{{ item.logo }}" alt="{{ item.text }} logo" class="partner-logo">
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+</footer>

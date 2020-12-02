@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {% if page.url == "/" %}
+      {{ site.name }}
+    {% else %}
+      {{ title }} | {{ site.name }}
+    {% endif %}
+  </title>
+  {% block styles %}
+    {% set css %}
+      {% include "css/base.css" %}
+      {% include "css/nav.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+  {% endblock %}
+  <link rel="stylesheet" href="https://use.typekit.net/hcr4wnn.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+</head>
+<body class="{{ layout }}">
+
+  {% include "partials/site-header.njk" %}
+
+  {% block content %}
+  <main id="main-content">
+    <div class="page-header">
+      <h2 class="page-title">{{ title }}</h2>
+    </div>
+    <div class="page-content">
+      {{ content | safe }}
+    </div>
+  </main>
+  {% endblock content %}
+
+  {% include "partials/site-footer.njk" %}
+
+</body>
+</html>

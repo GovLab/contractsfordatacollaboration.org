@@ -1,0 +1,32 @@
+{% extends 'layouts/base.njk' %}
+
+{% block styles %}
+  {% set css %}
+    {% include "css/base.css" %}
+    {% include "css/nav.css" %}
+    {% include "css/page.css" %}
+    {% include "css/resources.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+{% endblock %}
+
+
+{% block content %}
+<main id="main-content">
+  <div class="page-header">
+    <h2 class="page-title">{{ title }}</h2>
+  </div>
+  <div class="page-content">
+    {% if collections.resources[0] %}
+    <section class="case-studies">
+      {% for item in collections.resources %}
+        {% include "partials/article.njk" %}
+      {% endfor %}
+    </section>
+    {% endif %}
+  </div>
+
+</main>
+{% endblock %}

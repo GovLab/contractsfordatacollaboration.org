@@ -1,0 +1,12 @@
+{% extends 'layouts/base.njk' %}
+
+{% block styles %}
+  {% set css %}
+    {% include "css/base.css" %}
+    {% include "css/nav.css" %}
+    {% include "css/page.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+{% endblock %}

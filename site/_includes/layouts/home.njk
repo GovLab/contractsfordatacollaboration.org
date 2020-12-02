@@ -1,0 +1,22 @@
+{% extends 'layouts/base.njk' %}
+
+{% block styles %}
+  {% set css %}
+    {% include "css/base.css" %}
+    {% include "css/nav.css" %}
+    {% include "css/home.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+{% endblock %}
+
+{% block content %}
+<main id="main-content">
+  {% if ctas %}
+    {% for item in ctas %}
+      {% include "partials/cta.njk" %}
+    {% endfor %}
+  {% endif %}
+</main>
+{% endblock %}

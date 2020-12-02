@@ -1,0 +1,38 @@
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.cta {
+  background: #003577;
+  flex: 33%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 2.25rem;
+}
+.cta-text {
+  color: #fff;
+  font-size: 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+.cta-link {
+  background: #00a4c6;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  margin: 2rem auto;
+  transition: background-color .5s ease;
+}
+.cta-link:focus,
+.cta-link:hover {
+  background: #00d0fb;
+}
+.cta-body-text {
+  color: #fff;
+  max-width: 45rem;
+  margin: 2rem auto;
+}

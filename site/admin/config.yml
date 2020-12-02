@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "site/static/files"
+public_folder: "/static/files"
+collections:
+  - name: "landings"
+    label: "Landing Pages"
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "Homepage"
+        create: false
+        delete: false
+        file: "site/index.md"
+        slug: "{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
+          - label: "Call to Action"
+            name: "ctas"
+            widget: "list"
+            fields:
+              - label: "CTA Block"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: "CTA Text", name: "cta_text", widget: "text"}
+                  - {label: "CTA Button Title", name: "cta_btn_title", widget: "text"}
+                  - {label: "CTA URL", name: "cta_url", widget: "string"}
+      - name: "library"
+        label: "Library"
+        create: false
+        delete: false
+        file: "site/library.md"
+        slug: "{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "string", default: "/library/"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "library"}
+          - {label: "Embed", name: "embed", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    folder: "site/pages"
+    slug: "{{slug}}"
+    preview_path: "pages/{{slug}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "resources"
+    label: "Resources"
+    folder: "site/resources"
+    slug: "{{slug}}"
+    preview_path: "resources/{{slug}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["case-study", "report"]}
+      - {label: "Description", name: "description", widget: "text"}
+  - label: "Global Settings"
+    name: "globals"
+    editor:
+      preview: false
+    files:
+    - name: "nav"
+      label: "Navigation"
+      create: false
+      delete: false
+      file: "site/_data/navigation.json"
+      fields:
+        - label: "Items"
+          name: "items"
+          widget: "list"
+          fields:
+            - {label: "Text", name: "text", widget: "string"}
+            - {label: "Url", name: "url", widget: "string"}
+    - name: "partners"
+      label: "Partners"
+      create: false
+      delete: false
+      file: "site/_data/partners.json"
+      fields:
+        - label: "Partners"
+          name: "items"
+          widget: "list"
+          fields:
+            - {label: "Text", name: "text", widget: "string"}
+            - {label: "Url", name: "url", widget: "string"}
+            - {label: "Logo", name: "logo", widget: "image"}

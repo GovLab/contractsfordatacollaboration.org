@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Our Framework",
+      "url": "/our-framework/"
+    },
+    {
+      "text": "Library",
+      "url": "/library/"
+    },
+    {
+      "text": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "text": "Partners",
+      "url": "/partners/"
+    },
+    {
+      "text": "About",
+      "url": "/about/"
+    }
+  ]
+}

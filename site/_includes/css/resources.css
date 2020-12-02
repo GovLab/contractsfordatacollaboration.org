@@ -1,0 +1,25 @@
+.resource-group-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 2rem auto 1rem auto;
+}
+.post {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 1rem 0;
+}
+.post:last-of-type {
+  border-bottom: 0px;
+}
+.post-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.post-date {
+  color: grey;
+  font-size: .75rem;
+  display: block;
+  margin-bottom: .5rem;
+}
+.post-decription {
+  font-size: 1rem;
+}

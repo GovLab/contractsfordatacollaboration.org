@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "GovLab at New York University",
+      "url": "https://www.thegovlab.org/",
+      "logo": "/static/files/govlab-logo-white.svg"
+    },
+    {
+      "text": "SDSN TReNDS",
+      "url": "https://www.sdsntrends.org/",
+      "logo": "/static/files/trends-logo-white.svg"
+    },
+    {
+      "text": "University of Washington’s Information Risk Research Initiative",
+      "url": "https://www.washington.edu/",
+      "logo": "/static/files/uwashington_logo_white.svg"
+    },
+    {
+      "text": "World Economic Forum",
+      "url": "https://www.weforum.org/",
+      "logo": "/static/files/WEF-logo-white.svg"
+    }
+  ]
+}
